@@ -13151,7 +13151,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13407,7 +13407,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -13471,7 +13471,7 @@ memory usage: 4.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -13562,7 +13562,7 @@ Percentage of individuals making more than $50,000: 24.7844%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -13623,7 +13623,7 @@ Percentage of individuals making more than $50,000: 24.7844%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -13673,7 +13673,7 @@ Percentage of individuals making more than $50,000: 24.7844%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -13885,7 +13885,7 @@ Percentage of individuals making more than $50,000: 24.7844%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
@@ -13936,7 +13936,7 @@ Percentage of individuals making more than $50,000: 24.7844%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -14022,7 +14022,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
@@ -14034,7 +14034,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <span class="sd">FN = 0 # No predicted negatives in the naive case</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="n">TP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span>
-<span class="n">FP</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">FP</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="n">TP</span> 
 <span class="n">TN</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">FN</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -14067,7 +14067,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Naive Predictor: [Accuracy score: 0.1986, F-score: 0.2365]
+<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917]
 </pre>
 </div>
 </div>
@@ -14231,12 +14231,13 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </ul>
 <p>What makes this model a good candidate for the problem, given what you know about the data?</p>
 <ul>
-<li>Random forest algorithm can be used for both classifications and regression task.</li>
+<li>Random forest algorithm is the best choise when you have categorical data (like our data in this problem) and when the accuracy required. And it's good clasifier for classifications Task.</li>
 </ul>
 <p>References for all answers of RandomForest:</p>
 <ul>
 <li>ref <a href="http://rosiezou.com/RFPaperDraft.html">http://rosiezou.com/RFPaperDraft.html</a></li>
 <li>ref <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924271616000265">https://www.sciencedirect.com/science/article/abs/pii/S0924271616000265</a></li>
+<li>ref <a href="https://udacity-reviews-uploads.s3.us-west-2.amazonaws.com/_attachments/162719/1546407170/microsoft-machine-learning-algorithm-cheat-sheet-v7.pdf">microsoft-machine-learning-algorithm-cheat-sheet-v7.pdf</a></li>
 </ul>
 
 </div>
@@ -14845,7 +14846,7 @@ The F-score of the optimized model  is 0.7288
 
 </code></pre>
 <h5 id="How-do-the-results-from-your-optimized-model-compare-to-the-naive-predictor-benchmarks-you-found-earlier-in-Question-1?">How do the results from your optimized model compare to the naive predictor benchmarks you found earlier in Question 1?<a class="anchor-link" href="#How-do-the-results-from-your-optimized-model-compare-to-the-naive-predictor-benchmarks-you-found-earlier-in-Question-1?">&#182;</a></h5>
-<pre><code>Naive Predictor: [Accuracy score: 0.1986, F-score: 0.2365] and when we compare to the optimzed model results.
+<pre><code>Naive Predictor: Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917] and when we compare to the optimzed model results.
 It's seems very better and huge than the naive predictor.
 This mean the opt-model is better than naive model.   </code></pre>
 
